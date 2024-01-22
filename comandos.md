@@ -16,5 +16,18 @@ Categoria 04:
 
 - `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`
 
+# Metacaracteres
+
+Controle:
+
+- `;`, `&`, `&&`, `||`, `;;`, `;;&`, `;&`
+
+Pipe:
+
+- `|`, `|&`
+
+Redirecionamento:
+
+- `<`, `<<`, `<<<`, `>`, `>>`, `&>`, `&>>`
 
 
