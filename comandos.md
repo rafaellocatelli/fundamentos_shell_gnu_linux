@@ -14,7 +14,7 @@ Categoria 03:
 
 Categoria 04: 
 
-- `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`
+- `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`, `sleep`, `ps`, `jobs`, `true`, `false`
 
 # Metacaracteres
 
@@ -29,5 +29,3 @@ Pipe:
 Redirecionamento:
 
 - `<`, `<<`, `<<<`, `>`, `>>`, `&>`, `&>>`
-
-
