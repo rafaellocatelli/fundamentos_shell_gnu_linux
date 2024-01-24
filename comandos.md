@@ -15,7 +15,29 @@ Categoria 03:
 Categoria 04: 
 
 - `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`, `sleep`, `ps`, `jobs`, `true`, `false`, `locale`, `whoami`, `time`, `teste`, `let`, `(( ))`, `[[ ]]`, `help`
-- `$PWD`, `$OLDPWD`, `~+`, `~-`, `~`, `~sys`, `~root`, `set`, `printf`
+- `$PWD`, `$OLDPWD`, `~+`, `~-`, `~`, `~sys`, `~root`, `set`, `printf`, `file`, `stat`, `touch`, `find`
+- `echo $SHLVL`, `echo $?`
+- `cat | strace -f -e read,clone,execve bash`
+- `cat | strace -f -e read,write,clone,execve,dup2,openat,close bash`
+- `stty -echo`      <!-- desligando a função echo no momento da escrita -->
+- `stty -a`         <!-- exibe valore associados à sinalizações -->
+- `fg`              <!-- pega o último processo em segundo plano e torna em primeiro plano -->
+- `job`, `wait`
+
+# Tipos de arquivos tradicionais do UNIX
+
+1. Link simbólico
+2. Comum
+3. Diretório
+4. Socket
+5. FIFO
+6. Dispositivo caracter
+7. Dispositivo bloco
+
+# Terminais emulados
+
+`tty` - Implementado no espaço do Kernel Linux
+`pty` - pseudoterminais (pts e ptm)
 
 # Metacaracteres
 
@@ -54,3 +76,6 @@ Exemplo:
 $ time ls -la arquivonaoexistente 2> err.txt
 $ cat err.txt
 ```
+
+
+
