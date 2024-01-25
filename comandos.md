@@ -23,6 +23,9 @@ Categoria 04:
 - `stty -a`         <!-- exibe valore associados à sinalizações -->
 - `fg`              <!-- pega o último processo em segundo plano e torna em primeiro plano -->
 - `job`, `wait`
+- `batcat [nome_dos_arquivos]`
+- `ps --forest`     <!-- traça a ramificação -->
+- `ps -aux --forest` ou `ps -auxf`
 
 # Tipos de arquivos tradicionais do UNIX
 
@@ -33,6 +36,12 @@ Categoria 04:
 5. FIFO
 6. Dispositivo caracter
 7. Dispositivo bloco
+
+# hash bang
+
+#!/bin/bash
+
+#!/usr/bin/env python3
 
 # Terminais emulados
 
@@ -76,6 +85,3 @@ Exemplo:
 $ time ls -la arquivonaoexistente 2> err.txt
 $ cat err.txt
 ```
-
-
-
