@@ -1,3 +1,19 @@
+# Operadores de redirecionamento
+
+`>` - Redirecionamento std out
+`2>` - Redirecionamento std err
+
+
+# Palavra reservada
+
+- A palavra reservada não faz parte do comando, ele é uma diretiva de como o comando deve ser executado.
+
+Exemplo:
+```bash
+$ time ls -la arquivonaoexistente 2> err.txt
+$ cat err.txt
+```
+
 # Comandos básicos
 
 Categoria 01:
@@ -70,18 +86,3 @@ Redirecionamento:
 `||` - Execução condicional (se erro)
 
 
-# Operadores de redirecionamento
-
-`>` - Redirecionamento std out
-`2>` - Redirecionamento std err
-
-
-# Palavra reservada
-
-- A palavra reservada não faz parte do comando, ele é uma diretiva de como o comando deve ser executado.
-
-Exemplo:
-```bash
-$ time ls -la arquivonaoexistente 2> err.txt
-$ cat err.txt
-```
