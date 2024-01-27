@@ -14,35 +14,6 @@ $ time ls -la arquivonaoexistente 2> err.txt
 $ cat err.txt
 ```
 
-# Comandos básicos
-
-Categoria 01:
-
-- `cd`, `mkdir`, `cp`, `mv`, `ls`
-
-Categoria 02:
-
-- `cat`, `head`, `tail`, `less`, `grep`, `sed`, `tr`, `awk`, `cut`
-
-Categoria 03: 
-
-- `man`, `info`, `which`, `apropos`
-
-Categoria 04: 
-
-- `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`, `sleep`, `ps`, `jobs`, `true`, `false`, `locale`, `whoami`, `time`, `teste`, `let`, `(( ))`, `[[ ]]`, `help`
-- `$PWD`, `$OLDPWD`, `~+`, `~-`, `~`, `~sys`, `~root`, `set`, `printf`, `file`, `stat`, `touch`, `find`
-- `echo $SHLVL`, `echo $?`
-- `cat | strace -f -e read,clone,execve bash`
-- `cat | strace -f -e read,write,clone,execve,dup2,openat,close bash`
-- `stty -echo`      <!-- desligando a função echo no momento da escrita -->
-- `stty -a`         <!-- exibe valore associados à sinalizações -->
-- `fg`              <!-- pega o último processo em segundo plano e torna em primeiro plano -->
-- `job`, `wait`
-- `batcat [nome_dos_arquivos]`
-- `ps --forest`     <!-- traça a ramificação -->
-- `ps -aux --forest` ou `ps -auxf`
-
 # Tipos de arquivos tradicionais do UNIX
 
 1. Link simbólico
@@ -86,3 +57,32 @@ Redirecionamento:
 `||` - Execução condicional (se erro)
 
 
+# Comandos básicos
+
+Categoria 01:
+
+- `cd`, `mkdir`, `cp`, `mv`, `ls`
+
+Categoria 02:
+
+- `cat`, `head`, `tail`, `less`, `grep`, `sed`, `tr`, `awk`, `cut`
+
+Categoria 03: 
+
+- `man`, `info`, `which`, `apropos`
+
+Categoria 04: 
+
+- `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`, `sleep`, `ps`, `jobs`, `true`, `false`, `locale`, `whoami`, `time`, `teste`, `let`, `(( ))`, `[[ ]]`, `help`
+- `$PWD`, `$OLDPWD`, `~+`, `~-`, `~`, `~sys`, `~root`, `set`, `printf`, `file`, `stat`, `touch`, `find`
+- `echo $SHLVL`, `echo $?`
+- `cat | strace -f -e read,clone,execve bash`
+- `cat | strace -f -e read,write,clone,execve,dup2,openat,close bash`
+- `stty -echo`      <!-- desligando a função echo no momento da escrita -->
+- `stty -a`         <!-- exibe valore associados à sinalizações -->
+- `fg`              <!-- pega o último processo em segundo plano e torna em primeiro plano -->
+- `job`, `wait`
+- `batcat [nome_dos_arquivos]`
+- `ps --forest`     <!-- traça a ramificação -->
+- `ps -aux --forest` ou `ps -auxf`
+- `pstree -npTC age`
