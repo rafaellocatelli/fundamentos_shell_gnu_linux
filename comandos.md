@@ -78,11 +78,22 @@ Categoria 04:
 - `echo $SHLVL`, `echo $?`
 - `cat | strace -f -e read,clone,execve bash`
 - `cat | strace -f -e read,write,clone,execve,dup2,openat,close bash`
-- `stty -echo`      <!-- desligando a função echo no momento da escrita -->
-- `stty -a`         <!-- exibe valore associados à sinalizações -->
-- `fg`              <!-- pega o último processo em segundo plano e torna em primeiro plano -->
+- `stty -echo`                      <!-- desligando a função echo no momento da escrita -->
+- `stty -a`                         <!-- exibe valore associados à sinalizações -->
+- `fg`                              <!-- pega o último processo em segundo plano e torna em primeiro plano -->
 - `job`, `wait`
 - `batcat [nome_dos_arquivos]`
-- `ps --forest`     <!-- traça a ramificação -->
+- `ps --forest`                     <!-- traça a ramificação -->
 - `ps -aux --forest` ou `ps -auxf`
+- `ps -lF -C 'bash'` ou `ps -o f,stat,pid,comm -C 'bash'`
+- `ps -e` ou `ps -el` ou `ps -elF`  <!--info estática-->
+- `htop` ou `top`                   <!--info dinamica-->
 - `pstree -npTC age`
+- `kill -l`                         <!-- visualizar a tabela de sinais -->
+- `trap`
+- `exec bash`                       <!--reinicia o bash-->
+- `cat /proc/uptime` ou `uptime`    <!-- exiebe a quantidade de tempo em que o computador está ligado -->
+- `cat /proc/$$/maps`               <!-- visualizar as memórias reservadas na RAM para o processo -->
+- `cat /proc/sys/kernel/pid_max`    <!-- exibe a quantidade máxima de Process ID que o computador consegue gerar. Após atingir o limite, ele reinicia a partir do 300. Pois os 300 primeiros são reservados para processos internos do S.O. -->
+- `cat` vs `tac`                    <!-- cat exibe o arquivo de cima para baixo e o tac exibe de baixo para cima-->
+- `lscpu` e `less /proc/cpuinfo`
