@@ -96,4 +96,41 @@ Categoria 04:
 - `cat /proc/$$/maps`               <!-- visualizar as memórias reservadas na RAM para o processo -->
 - `cat /proc/sys/kernel/pid_max`    <!-- exibe a quantidade máxima de Process ID que o computador consegue gerar. Após atingir o limite, ele reinicia a partir do 300. Pois os 300 primeiros são reservados para processos internos do S.O. -->
 - `cat` vs `tac`                    <!-- cat exibe o arquivo de cima para baixo e o tac exibe de baixo para cima-->
-- `lscpu` e `less /proc/cpuinfo`
+- `lscpu` e `cat /proc/cpuinfo` e `cat /proc/meminfo` e `cat /proc/version`
+
+- `export var`                      <!-- exportar uma variável de um shell para um shell filho -->
+
+## Observações
+
+**01**
+```bash
+$ var=123
+$ (echo $var)   # subshell
+123
+$ (echo $var; var=456; echo $var)   
+123
+456
+$ echo $var     # shell pai não visualiza variáveis do subshell
+123
+$ bash          # criando e acessando um shell filho
+$ echo $var
+
+$ exit          # encerrando o shell filho e retornando à sessao do shell pai
+exit
+$ echo $var
+123
+$ export var    # exportando a variável
+$ bash          # criando e acessando um shell filho
+$ echo $var
+123
+```
+
+**02**
+```bash
+$ # há variáveis que seus resultados são copiados do shell pai e outras não
+$ (echo $SHLVL $$ $BASHPID); echo $SHLVL $$ $BASHPID   # SHLVL e $$ são copiados do pai. $BASHPID não é copiado e é gerado no subshell
+1 12524 15464
+1 12524 12524
+```
+
+
