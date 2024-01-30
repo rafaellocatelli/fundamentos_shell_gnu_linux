@@ -132,5 +132,3 @@ $ (echo $SHLVL $$ $BASHPID); echo $SHLVL $$ $BASHPID   # SHLVL e $$ são copiado
 1 12524 15464
 1 12524 12524
 ```
-
-
