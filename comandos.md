@@ -99,6 +99,8 @@ Categoria 04:
 - `lscpu` e `cat /proc/cpuinfo` e `cat /proc/meminfo` e `cat /proc/version`
 
 - `export var`                      <!-- exportar uma variável de um shell para um shell filho -->
+- `echo $PATH`                      <!-- Exibe os caminhos mapeados dos diretórios que podem ser usados no Bash sem informar o caminho -->
+- `declare -p`                      <!-- Exibe todas as funções e variáveis definidas na seção shell em execução -->
 
 ## Observações
 

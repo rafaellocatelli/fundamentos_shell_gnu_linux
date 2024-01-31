@@ -111,3 +111,49 @@ declare -- teste2="laranja"
 obs¹: O valor nulo em Bash é o texto vazio: ""
 obs²: `local` também é usado para construir variáveis, porém, seu uso é exclusivo dentro de funções.
 
+Para destruir uma variável, basta usar `unset [nome_da_variavel]`
+
+Variáveis com `declare -i` significa que aceitam expressões aritméticas, mas elas continuam sendo armazenadas como String
+
+Os vetores indexados são identificados com `declare -a`
+Uma das formas de definir um vetor indexado no Bash:
+>   a=(1 2 3 4)
+
+obs: Cada elemento é uma String.
+
+Os vetores associativo são identificados com `declare -A`
+
+obs: No caso de vetor associativo, é obrigatório a declaração explicita
+
+Exemplo:
+```bash
+$ variavel=([vw]=fusca [fiat]=147 [ford]=corcel)
+$ declare -p variavel 
+declare -a variavel=([0]="corcel")
+$ declare -A variavel=([vw]=fusca [fiat]=147 [ford]=corcel)
+bash: variavel: impossível converter array indexado para associativo
+$ declare -p variavel 
+declare -a variavel=([0]="corcel")
+$ unset variavel 
+$ declare -A variavel=([vw]=fusca [fiat]=147 [ford]=corcel)
+$ declare -p variavel 
+declare -A variavel=([vw]="fusca" [ford]="corcel" [fiat]="147" )
+```
+
+As variáveis "normais", ou seja, escalares do tipo String são identificadas por `declare --`
+
+Exemplo:
+```bash
+$ a=banana
+$ b="laranja melao"
+$ declare c=futebol
+$ declare -- d=basket
+$ declare -p a b c d
+declare -- a="banana"
+declare -- b="laranja melao"
+declare -- c="futebol"
+declare -- d="basket"
+```
+
+Para tornar a variável exportada, podemos usar `export [nome_da_variavel]` ou `declare -x [nome_da_variavel]`
+
