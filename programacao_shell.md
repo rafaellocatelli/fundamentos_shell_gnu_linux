@@ -59,7 +59,6 @@ O propósito da linguagem do shell é ajudar a determinar como, quando, sob quai
     - Expandem informações diversas.
 7. Nós só podemos manipular diretamente as variáveis!
 
-
 ## Argumentos e Variáveis exportadas
 
 `ENV` contém a lista de variáveis exportadas, conhecidas como variáveis de ambiente.
@@ -82,3 +81,33 @@ execve("./script.sh", ["./script.sh", "argumento1", "argumento2", "argumento3"],
 olá, mundo!
 +++ exited with 0 +++
 ```
+
+Além das variáveis exportadas, o Shell possui suas próprias variáveis definidas e ele mesmo controla. Algumas dessas variáveis conseguimos controlar.
+
+## Construindo variáveis
+
+Há 3 modos de construir uma variável: `declare [nome_da_variavel]=[valor]`, `typeset [nome_da_variavel]=[valor]` ou diretamente com `[nome_da_variavel]=[valor]`
+
+Exemplo:
+```bash
+$ var=banana
+$ declare -p var
+declare -- var="banana"
+$ declare -p foo
+bash: declare: foo: não encontrado
+$ declare foo
+$ declare -p foo
+declare -- foo
+$ bar=
+$ declare -p bar
+declare -- bar=""
+$ typeset -p var
+declare -- var="banana"
+$ declare teste2=laranja
+$ declare -p teste2
+declare -- teste2="laranja"
+```
+
+obs¹: O valor nulo em Bash é o texto vazio: ""
+obs²: `local` também é usado para construir variáveis, porém, seu uso é exclusivo dentro de funções.
+
