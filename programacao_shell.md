@@ -155,5 +155,13 @@ declare -- c="futebol"
 declare -- d="basket"
 ```
 
-Para tornar a variável exportada, podemos usar `export [nome_da_variavel]` ou `declare -x [nome_da_variavel]`
+Para tornar a variável exportada, podemos usar `export [nome_da_variavel]` ou `declare -x [nome_da_variavel]`.
+
+Obs: São exportadas apenas para processos iniciados a partir do local onde foi exportado a variável.
+
+O comando `help export` exibe mais detalhes sobre exportação de variáveis.
+
+`export -p` exibe todas as variáveis exportadas e `declare -p` exibe todas as variáveis exportadas e não exportadas.
+
+
 
