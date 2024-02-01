@@ -163,5 +163,13 @@ O comando `help export` exibe mais detalhes sobre exportação de variáveis.
 
 `export -p` exibe todas as variáveis exportadas e `declare -p` exibe todas as variáveis exportadas e não exportadas.
 
+É possível definir variáveis exportadas no arquivo `~/.bashrc`
 
+## Extensão no nome do arquivo
 
+A extensão no nome do arquivo são apenas para nós, usuários, identificarmos o conteúdo sem precisar "investigar" abrindo ou utilizando alguma ferramenta como por exemplo `file [nome_do_arquivo]`
+
+Os sufixos no nome não altera em nada o arquivo, isso somente em S.O. like UNIX
+
+Há programas que verificam o sufixo para auxiliar o usuário com informações extras, como por exemplo, no VSCode é alterado o icone de acordo com o sufixo.
+Esses programas não alteram o comportamento do programa e eles sabem fazendo uma consulta em um banco de dados deles.
