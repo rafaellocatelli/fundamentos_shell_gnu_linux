@@ -287,23 +287,64 @@ O comando `(echo banana)` é executado em um sub-shell, ou seja, ele executa sys
 
 ## observação [0009]
 
+comando `read` é uma abstração da syscall read
+
 ```bash
-
-
+$ read
+10 11 12
+$ read a b c
+1 2 3
+$ echo $REPLY
+10 11 12
+$ echo $a
+1
+$ echo $b
+2
+$ echo $c
+3
 ```
+
+Mais detalhes da abstração `read`, veja em `help read`
+
+Mais detalhes sobre a syscall read, veja em `man 2 read`
+
 
 ## observação [0010]
 
 ```bash
-
-
+$ cat arquivo.txt && echo
+Rafael Locatelli
+$ cat steste.sh && echo
+#!/bin/bash
+echo Seja bem-vindo!
+echo Qual é o seu nome?
+read nome
+echo Muito prazer, $nome
+$ ./steste.sh < arquivo.txt 
+Seja bem-vindo!
+Qual é o seu nome?
+Muito prazer, Rafael Locatelli
 ```
 
 ## observação [0011]
 
+utilizando o comando `shift`
+
 ```bash
-
-
+$ cat steste.sh && echo
+#!/bin/bash
+echo 'Primeiro argumento:   '   $1
+echo 'Todos argumentos:     '   $@
+echo ---------------------------------
+shift 3
+echo 'Primeiro argumento:   '   $1
+echo 'Todos argumentos:     '   $@
+$ ./steste.sh {a..z}
+Primeiro argumento:    a
+Todos argumentos:      a b c d e f g h i j k l m n o p q r s t u v w x y z
+---------------------------------
+Primeiro argumento:    d
+Todos argumentos:      d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
 ## observação [0012]

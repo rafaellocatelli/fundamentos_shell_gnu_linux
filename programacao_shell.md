@@ -173,3 +173,45 @@ Os sufixos no nome não altera em nada o arquivo, isso somente em S.O. like UNIX
 
 Há programas que verificam o sufixo para auxiliar o usuário com informações extras, como por exemplo, no VSCode é alterado o icone de acordo com o sufixo.
 Esses programas não alteram o comportamento do programa e eles sabem fazendo uma consulta em um banco de dados deles.
+
+## Filosofia UNIX
+
+1. Escreva programas que façam apenas uma coisa, mas que a façam bem feita.
+2. Escreva programas que trabalhem juntos.
+3. Escreva programas que manipulem streams de texto, pois esta é uma interface universal.
+
+by Doug McIlroy
+
+
+## Diferença entre CLI e TUI
+
+CLI = Command Line Interface (Interface de linha de comando)
+- Geralmente, foram feitos para trabalhar do início ao fim sem interrupção
+
+TUI = Terminal User Interface or Text-based User Interface
+- Geralmente, vai envolver a interrupção do programa para receber algum dado do utilizador
+
+## Permissões de um arquivo
+
+Cada arquivo possui configurações de permissão.
+
+`r`  -  read    - Permissão de leitura
+`w`  -  write   - Permissão de escrita
+`x`  -  execute - Permissão de execução
+
+```bash
+$ ls -l script.sh 
+-rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+$ chmod -x script.sh 
+$ ls -l script.sh 
+-rw-rw-r-- 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+$ chmod +x script.sh 
+$ ls -l script.sh 
+-rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+```
+Exemplo:
+>   -rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+`-`     - Não é um ponteiro (link símbolico)
+`rwx`   - Config. para usuário logado
+`rwx`   - Config. para o grupo do usuário logado
+`r-x`   - Config. para outros grupos
