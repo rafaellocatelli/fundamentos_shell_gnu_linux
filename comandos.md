@@ -101,6 +101,10 @@ Categoria 04:
 - `export var`                      <!-- exportar uma variável de um shell para um shell filho -->
 - `echo $PATH`                      <!-- Exibe os caminhos mapeados dos diretórios que podem ser usados no Bash sem informar o caminho -->
 - `declare -p`                      <!-- Exibe todas as funções e variáveis definidas na seção shell em execução -->
+- `whereis [nome_do_programa]`      <!-- Exibe os caminhos de execução do programa -->
+- `env`                             <!-- Exibe todas as variáveis exportadas -->
+- `ls -a [nome_do_comando]`         <!-- Exibe onde está armazenado e seu apelido -->
+
 
 ## Observações
 
