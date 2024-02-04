@@ -84,6 +84,34 @@ olá, mundo!
 
 Além das variáveis exportadas, o Shell possui suas próprias variáveis definidas e ele mesmo controla. Algumas dessas variáveis conseguimos controlar.
 
+## Permissões de um arquivo
+
+Cada arquivo possui configurações de permissão.
+
+`r`  -  read    - Permissão de leitura
+`w`  -  write   - Permissão de escrita
+`x`  -  execute - Permissão de execução
+
+```bash
+$ ls -l script.sh 
+-rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+$ chmod -x script.sh 
+$ ls -l script.sh 
+-rw-rw-r-- 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+$ chmod +x script.sh 
+$ ls -l script.sh 
+-rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+```
+Exemplo:
+>   -rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
+`-`     - Não é um ponteiro (link símbolico)
+`rwx`   - Config. para usuário logado
+`rwx`   - Config. para o grupo do usuário logado
+`r-x`   - Config. para outros grupos
+
+
+
+
 ## Construindo variáveis
 
 Há 3 modos de construir uma variável: `declare [nome_da_variavel]=[valor]`, `typeset [nome_da_variavel]=[valor]` ou diretamente com `[nome_da_variavel]=[valor]`
@@ -191,27 +219,3 @@ CLI = Command Line Interface (Interface de linha de comando)
 TUI = Terminal User Interface or Text-based User Interface
 - Geralmente, vai envolver a interrupção do programa para receber algum dado do utilizador
 
-## Permissões de um arquivo
-
-Cada arquivo possui configurações de permissão.
-
-`r`  -  read    - Permissão de leitura
-`w`  -  write   - Permissão de escrita
-`x`  -  execute - Permissão de execução
-
-```bash
-$ ls -l script.sh 
--rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
-$ chmod -x script.sh 
-$ ls -l script.sh 
--rw-rw-r-- 1 locatelli locatelli 1794 fev  1 13:13 script.sh
-$ chmod +x script.sh 
-$ ls -l script.sh 
--rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
-```
-Exemplo:
->   -rwxrwxr-x 1 locatelli locatelli 1794 fev  1 13:13 script.sh
-`-`     - Não é um ponteiro (link símbolico)
-`rwx`   - Config. para usuário logado
-`rwx`   - Config. para o grupo do usuário logado
-`r-x`   - Config. para outros grupos
