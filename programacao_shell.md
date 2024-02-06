@@ -4,20 +4,9 @@
 
 Shell é uma linguagem de alto nível, interpretada, imperativa, procedural e estrutural
 
-## Sintaxe
+## Propósito
 
-1. Comandos simples
-2. Regras de citação
-3. Expansões
-4. Operadores de controle
-5. Comandos compostos
-
-## Semantica
-
-1. Não existem comandos "do Linux": os comandos são seus!
-2. Comando é o que você quer que o shell faça, só que escrito na linguagem que ele consegue interpretar.
-3. O shell nunca erra: se o resultado não foi o esperado, foi você que esperou o resultado errado!
-4. Preocupe-se mais com a expressividade do que com a legibilidade.
+O propósito da linguagem do shell é ajudar a determinar como, quando, sob quais condições e com que dados os comandos serão executados!
 
 ## Bibliotecas
 
@@ -33,17 +22,6 @@ Shell é uma linguagem de alto nível, interpretada, imperativa, procedural e es
 
 *Use com consciência crítica!
 
-## Propósito
-
-O propósito da linguagem do shell é ajudar a determinar como, quando, sob quais condições e com que dados os comandos serão executados!
-
-## Tipagem
-
-1. Todos os dados são de tipo "indeterminado".
-2. Em princípio, todos são cadeias de caracteres (strings).
-3. Quem programa determina que tipos certas cadeias representam.
-4. Cadeias numéricas podem participar de expressões aritméticas.
-
 ## Parâmetros e variáveis
 
 1. Todos os valores identificados são parâmetros.
@@ -58,6 +36,30 @@ O propósito da linguagem do shell é ajudar a determinar como, quando, sob quai
 6. Parâmetros especiais:
     - Expandem informações diversas.
 7. Nós só podemos manipular diretamente as variáveis!
+
+## Sintaxe
+
+1. Comandos simples
+2. Regras de citação
+3. Expansões
+4. Operadores de controle
+5. Comandos compostos
+
+## Semantica
+
+1. Não existem comandos "do Linux": os comandos são seus!
+2. Comando é o que você quer que o shell faça, só que escrito na linguagem que ele consegue interpretar.
+3. O shell nunca erra: se o resultado não foi o esperado, foi você que esperou o resultado errado!
+4. Preocupe-se mais com a expressividade do que com a legibilidade.
+
+## Tipagem
+
+1. Todos os dados são de tipo "indeterminado".
+2. Em princípio, todos são cadeias de caracteres (strings).
+3. Quem programa determina que tipos certas cadeias representam.
+4. Cadeias numéricas podem participar de expressões aritméticas.
+
+
 
 ## Argumentos e Variáveis exportadas
 

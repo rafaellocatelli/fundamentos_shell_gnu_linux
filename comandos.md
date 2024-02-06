@@ -73,7 +73,9 @@ Categoria 03:
 
 Categoria 04: 
 
-- `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`, `sleep`, `ps`, `jobs`, `true`, `false`, `locale`, `whoami`, `time`, `teste`, `let`, `(( ))`, `[[ ]]`, `help`
+- `nl`, `wc`, `hd`, `rm`, `pwd`, `echo`, `sha1sum`, `type`, `alias`
+- `sleep`, `ps`, `jobs`, `true`, `false`, `locale`, `whoami`, `time`
+- `teste`, `let`, `(( ))`, `[[ ]]`, `help`
 - `$PWD`, `$OLDPWD`, `~+`, `~-`, `~`, `~sys`, `~root`, `set`, `printf`, `file`, `stat`, `touch`, `find`
 - `echo $SHLVL`, `echo $?`
 - `cat | strace -f -e read,clone,execve bash`
@@ -104,37 +106,3 @@ Categoria 04:
 - `whereis [nome_do_programa]`      <!-- Exibe os caminhos de execução do programa -->
 - `env`                             <!-- Exibe todas as variáveis exportadas -->
 - `ls -a [nome_do_comando]`         <!-- Exibe onde está armazenado e seu apelido -->
-
-
-## Observações
-
-**01**
-```bash
-$ var=123
-$ (echo $var)   # subshell
-123
-$ (echo $var; var=456; echo $var)   
-123
-456
-$ echo $var     # shell pai não visualiza variáveis do subshell
-123
-$ bash          # criando e acessando um shell filho
-$ echo $var
-
-$ exit          # encerrando o shell filho e retornando à sessao do shell pai
-exit
-$ echo $var
-123
-$ export var    # exportando a variável
-$ bash          # criando e acessando um shell filho
-$ echo $var
-123
-```
-
-**02**
-```bash
-$ # há variáveis que seus resultados são copiados do shell pai e outras não
-$ (echo $SHLVL $$ $BASHPID); echo $SHLVL $$ $BASHPID   # SHLVL e $$ são copiados do pai. $BASHPID não é copiado e é gerado no subshell
-1 12524 15464
-1 12524 12524
-```
