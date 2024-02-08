@@ -1,5 +1,21 @@
 # Shell como linguagem de programação
 
+## Filosofia UNIX
+
+1. Escreva programas que façam apenas uma coisa, mas que a façam bem feita.
+2. Escreva programas que trabalhem juntos.
+3. Escreva programas que manipulem streams de texto, pois esta é uma interface universal.
+
+by Doug McIlroy
+
+## Ferramentas
+
+1. Interpretador: Bash
+2. Editor/IDE: qualquer editor de textos puros (raw)
+3. Linter: shellcheck*
+
+*Use com consciência crítica!
+
 ## Descrição
 
 Shell é uma linguagem de alto nível, interpretada, imperativa, procedural e estrutural
@@ -14,13 +30,6 @@ O propósito da linguagem do shell é ajudar a determinar como, quando, sob quai
 2. Includes: outros scripts carregados por "source"
 3. Todos os programas CLI e scripts instalados!
 
-## Ferramentas
-
-1. Interpretador: Bash
-2. Editor/IDE: qualquer editor de textos puros (raw)
-3. Linter: shellcheck*
-
-*Use com consciência crítica!
 
 ## Parâmetros e variáveis
 
@@ -204,13 +213,6 @@ Os sufixos no nome não altera em nada o arquivo, isso somente em S.O. like UNIX
 Há programas que verificam o sufixo para auxiliar o usuário com informações extras, como por exemplo, no VSCode é alterado o icone de acordo com o sufixo.
 Esses programas não alteram o comportamento do programa e eles sabem fazendo uma consulta em um banco de dados deles.
 
-## Filosofia UNIX
-
-1. Escreva programas que façam apenas uma coisa, mas que a façam bem feita.
-2. Escreva programas que trabalhem juntos.
-3. Escreva programas que manipulem streams de texto, pois esta é uma interface universal.
-
-by Doug McIlroy
 
 
 ## Diferença entre CLI e TUI
