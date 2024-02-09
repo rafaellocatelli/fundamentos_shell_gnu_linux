@@ -1,5 +1,8 @@
 
 
+## observação [0002]
+
+
 ## observação [0001]
 
 ```bash
@@ -15,7 +18,6 @@ banana         laranja
 ```
 
 
-## observação [0002]
 
 ```bash
 locatelli:~/ $ ls -l
