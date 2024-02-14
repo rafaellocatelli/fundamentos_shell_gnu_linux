@@ -1,8 +1,3 @@
-
-
-## observação [0002]
-
-
 ## observação [0001]
 
 ```bash
@@ -16,6 +11,10 @@ banana laranja
 locatelli:~/ $ echo "$var"
 banana         laranja
 ```
+
+
+
+## observação [0002]
 
 
 

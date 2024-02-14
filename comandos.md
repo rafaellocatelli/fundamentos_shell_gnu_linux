@@ -90,8 +90,6 @@ Categoria 04:
 - `ps -lF -C 'bash'` ou `ps -o f,stat,pid,comm -C 'bash'`
 - `ps -e` ou `ps -el` ou `ps -elF`  <!--info estática-->
 - `htop` ou `top`                   <!--info dinamica-->
-- `pstree -npTC age`
-- `kill -l`                         <!-- visualizar a tabela de sinais -->
 - `trap`
 - `exec bash`                       <!--reinicia o bash-->
 - `cat /proc/uptime` ou `uptime`    <!-- exiebe a quantidade de tempo em que o computador está ligado -->
@@ -99,10 +97,12 @@ Categoria 04:
 - `cat /proc/sys/kernel/pid_max`    <!-- exibe a quantidade máxima de Process ID que o computador consegue gerar. Após atingir o limite, ele reinicia a partir do 300. Pois os 300 primeiros são reservados para processos internos do S.O. -->
 - `cat` vs `tac`                    <!-- cat exibe o arquivo de cima para baixo e o tac exibe de baixo para cima-->
 - `lscpu` e `cat /proc/cpuinfo` e `cat /proc/meminfo` e `cat /proc/version`
-
+- `pstree -npTC age`
+- `kill -l`                         <!-- visualizar a tabela de sinais -->
 - `export var`                      <!-- exportar uma variável de um shell para um shell filho -->
 - `echo $PATH`                      <!-- Exibe os caminhos mapeados dos diretórios que podem ser usados no Bash sem informar o caminho -->
 - `declare -p`                      <!-- Exibe todas as funções e variáveis definidas na seção shell em execução -->
 - `whereis [nome_do_programa]`      <!-- Exibe os caminhos de execução do programa -->
 - `env`                             <!-- Exibe todas as variáveis exportadas -->
 - `ls -a [nome_do_comando]`         <!-- Exibe onde está armazenado e seu apelido -->
+
